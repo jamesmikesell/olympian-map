@@ -2,9 +2,275 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>U.S. Olympian Hometowns</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+    />
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --card: #ffffff;
+        --ink: #17324d;
+        --muted: #5a7188;
+        --accent: #1b6ca8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(1.3rem, 2.2vw, 2rem);
+      }
+
+      .sub {
+        margin: 0 0 12px;
+        color: var(--muted);
+      }
+
+      .status {
+        background: var(--card);
+        border: 1px solid #d9e2ec;
+        border-radius: 10px;
+        padding: 10px 12px;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+      }
+
+      #map {
+        height: min(75vh, 760px);
+        border-radius: 12px;
+        border: 1px solid #d9e2ec;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(16, 36, 58, 0.08);
+      }
+
+      .popup-list {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+
+      .popup-list li {
+        margin: 2px 0;
+      }
+    </style>
   </head>
   <body>
-    Hello, world!
+    <div class="wrap">
+      <h1>2026 U.S. Olympian Hometowns</h1>
+      <p class="sub">Pins are clustered when zoomed out to reduce clutter.</p>
+      <div id="status" class="status">Loading data...</div>
+      <div id="map" role="region" aria-label="Olympian hometown map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script>
+      const statusEl = document.getElementById("status");
+
+      const map = L.map("map", {
+        worldCopyJump: true
+      }).setView([39.5, -98.35], 4);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      const clusters = L.markerClusterGroup({
+        spiderfyOnMaxZoom: true,
+        showCoverageOnHover: false,
+        maxClusterRadius: 50
+      });
+      map.addLayer(clusters);
+
+      const GEOCODE_CACHE_KEY = "olympian-hometown-geocode-cache-v1";
+      const geocodeCache = JSON.parse(localStorage.getItem(GEOCODE_CACHE_KEY) || "{}");
+
+      function keyFor(city, stateCountry) {
+        const normalize = (value) => value.trim().toLowerCase().replace(/\s+/g, " ");
+        return `${normalize(city)}|${normalize(stateCountry)}`;
+      }
+
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function geocodeHometown(city, stateCountry) {
+        const q = encodeURIComponent(`${city}, ${stateCountry}`);
+        const url =
+          `https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=pjson&SingleLine=${q}&maxLocations=1`;
+
+        const res = await fetch(url);
+        if (!res.ok) return null;
+
+        const data = await res.json();
+        const top = data.candidates && data.candidates[0];
+        if (!top || !top.location) return null;
+
+        return {
+          lat: top.location.y,
+          lon: top.location.x
+        };
+      }
+
+      async function loadCsvRows() {
+        const text = await fetch("./olympians.csv").then((r) => r.text());
+
+        const body = text.split(/\r?\n/).slice(1).join("\n");
+        const parsed = Papa.parse(body, {
+          header: true,
+          skipEmptyLines: true
+        });
+
+        return parsed.data.filter((row) => row["First name"] && row["Last name"]);
+      }
+
+      async function loadPrecomputedCoords() {
+        try {
+          const data = await fetch("./hometown-coords.json").then((r) => r.json());
+          return data.locations || {};
+        } catch {
+          return {};
+        }
+      }
+
+      function hometownGroups(rows) {
+        const groups = new Map();
+
+        for (const row of rows) {
+          const city = (row["Hometown City"] || "").trim();
+          const stateCountry = (row["Hometown State/Country"] || "").trim();
+          if (!city || !stateCountry) continue;
+
+          const key = keyFor(city, stateCountry);
+          if (!groups.has(key)) {
+            groups.set(key, {
+              city,
+              stateCountry,
+              athletes: []
+            });
+          }
+
+          groups.get(key).athletes.push({
+            name: `${(row["First name"] || "").trim()} ${(row["Last name"] || "").trim()}`.trim(),
+            sport: (row["Sport"] || "").trim(),
+            event: (row["Event"] || "").trim()
+          });
+        }
+
+        return Array.from(groups.values());
+      }
+
+      function addMarker(group, lat, lon) {
+        const hometown = `${group.city}, ${group.stateCountry}`;
+        const sorted = [...group.athletes].sort((a, b) => a.name.localeCompare(b.name));
+
+        const items = sorted
+          .map((a) => `<li><strong>${a.name}</strong>${a.sport ? ` - ${a.sport}` : ""}</li>`)
+          .join("");
+
+        const popup = `
+          <div>
+            <strong>${hometown}</strong><br/>
+            ${group.athletes.length} Olympian${group.athletes.length === 1 ? "" : "s"}
+            <ul class="popup-list">${items}</ul>
+          </div>
+        `;
+
+        const marker = L.marker([lat, lon]);
+        marker.bindPopup(popup, { maxHeight: 260 });
+        clusters.addLayer(marker);
+      }
+
+      async function render() {
+        const [rows, precomputedCoords] = await Promise.all([
+          loadCsvRows(),
+          loadPrecomputedCoords()
+        ]);
+        const groups = hometownGroups(rows);
+
+        let fromPrecomputed = 0;
+        let geocodedNow = 0;
+        let fromCache = 0;
+        let failed = 0;
+
+        statusEl.textContent = `Loaded ${rows.length} Olympians across ${groups.length} hometowns. Resolving coordinates...`;
+
+        for (let i = 0; i < groups.length; i += 1) {
+          const g = groups[i];
+          const key = keyFor(g.city, g.stateCountry);
+
+          let coords = precomputedCoords[key] || null;
+          if (coords) {
+            fromPrecomputed += 1;
+          } else if (geocodeCache[key]) {
+            coords = geocodeCache[key];
+            fromCache += 1;
+          } else {
+            try {
+              coords = await geocodeHometown(g.city, g.stateCountry);
+            } catch {
+              coords = null;
+            }
+
+            if (coords) {
+              geocodeCache[key] = coords;
+              geocodedNow += 1;
+              localStorage.setItem(GEOCODE_CACHE_KEY, JSON.stringify(geocodeCache));
+            } else {
+              failed += 1;
+            }
+
+            // Keep requests polite.
+            await sleep(120);
+          }
+
+          if (coords) addMarker(g, coords.lat, coords.lon);
+
+          if ((i + 1) % 10 === 0 || i === groups.length - 1) {
+            statusEl.textContent = `Processed ${i + 1}/${groups.length} hometowns. Mapped: ${fromPrecomputed + fromCache + geocodedNow}, unresolved: ${failed}.`;
+          }
+        }
+
+        const bounds = clusters.getBounds();
+        if (bounds.isValid()) map.fitBounds(bounds.pad(0.1));
+
+        statusEl.textContent = `Done. ${rows.length} Olympians, ${fromPrecomputed + fromCache + geocodedNow} hometown pins, ${failed} unresolved hometowns.`;
+      }
+
+      render().catch((err) => {
+        console.error(err);
+        statusEl.textContent = "Could not load map data. Check console for details.";
+      });
+    </script>
   </body>
 </html>

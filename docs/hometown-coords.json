@@ -1,0 +1,931 @@
+{
+  "locations": {
+    "pulaski|wisconsin": {
+      "lat": 44.6722158,
+      "lon": -88.2426026,
+      "label": "Pulaski, Wisconsin"
+    },
+    "golden valley|minnesota": {
+      "lat": 44.9861176,
+      "lon": -93.3784618,
+      "label": "Golden Valley, Minnesota"
+    },
+    "apple valley|minnesota": {
+      "lat": 44.73189305,
+      "lon": -93.24319596979167,
+      "label": "Apple Valley, Minnesota"
+    },
+    "juneau|alaska": {
+      "lat": 58.3019613,
+      "lon": -134.4196751,
+      "label": "Juneau, Alaska"
+    },
+    "appleton|wisconsin": {
+      "lat": 44.2613967,
+      "lon": -88.4069744,
+      "label": "Appleton, Wisconsin"
+    },
+    "center conway|new hampshire": {
+      "lat": 43.9947926,
+      "lon": -71.0609026,
+      "label": "Center Conway, New Hampshire"
+    },
+    "palo alto|california": {
+      "lat": 37.4434703,
+      "lon": -122.1651998,
+      "label": "Palo Alto, California"
+    },
+    "douglasville|georgia": {
+      "lat": 33.7514966,
+      "lon": -84.7477136,
+      "label": "Douglasville, Georgia"
+    },
+    "san antonio|texas": {
+      "lat": 29.4246002,
+      "lon": -98.4951405,
+      "label": "San Antonio, Texas"
+    },
+    "bethel|maine": {
+      "lat": 44.403515999999996,
+      "lon": -70.78423411527166,
+      "label": "Bethel, Maine"
+    },
+    "greensburg|pennsylvania": {
+      "lat": 40.3024514,
+      "lon": -79.5443274,
+      "label": "Greensburg, Pennsylvania"
+    },
+    "sanford|florida": {
+      "lat": 28.8117345,
+      "lon": -81.2680223,
+      "label": "Sanford, Florida"
+    },
+    "pembroke|massachusetts": {
+      "lat": 42.0714907,
+      "lon": -70.8092074,
+      "label": "Pembroke, Massachusetts"
+    },
+    "fort collins|colorado": {
+      "lat": 40.5871782,
+      "lon": -105.0770113,
+      "label": "Fort Collins, Colorado"
+    },
+    "herriman|utah": {
+      "lat": 40.5139784,
+      "lon": -112.0329086,
+      "label": "Herriman, Utah"
+    },
+    "santa clarita|california": {
+      "lat": 34.4137196,
+      "lon": -118.5250277,
+      "label": "Santa Clarita, California"
+    },
+    "laurel|maryland": {
+      "lat": 39.0984317,
+      "lon": -76.8485094,
+      "label": "Laurel, Maryland"
+    },
+    "lees summit|missouri": {
+      "lat": 38.88016160339911,
+      "lon": -94.19132187078499,
+      "label": "Lees Summit, Missouri"
+    },
+    "bethesda|maryland": {
+      "lat": 38.98127255,
+      "lon": -77.12335871396549,
+      "label": "Bethesda, Maryland"
+    },
+    "calgary, alberta|canada": {
+      "lat": 51.0456064,
+      "lon": -114.057541,
+      "label": "Calgary, Alberta, Canada"
+    },
+    "pewaukee|wisconsin": {
+      "lat": 43.0805651,
+      "lon": -88.2612045,
+      "label": "Pewaukee, Wisconsin"
+    },
+    "afton|minnesota": {
+      "lat": 44.9028414,
+      "lon": -92.7832322,
+      "label": "Afton, Minnesota"
+    },
+    "park city|utah": {
+      "lat": 40.6460921,
+      "lon": -111.4979963,
+      "label": "Park CIty, Utah"
+    },
+    "waltham|massachusetts": {
+      "lat": 42.3762385,
+      "lon": -71.2355644,
+      "label": "Waltham, Massachusetts"
+    },
+    "winthrop|washington": {
+      "lat": 48.4779232,
+      "lon": -120.186195,
+      "label": "Winthrop, Washington"
+    },
+    "anchorage|alaska": {
+      "lat": 61.2163129,
+      "lon": -149.894852,
+      "label": "Anchorage, Alaska"
+    },
+    "landgrove|vermont": {
+      "lat": 43.2597253,
+      "lon": -72.8487723,
+      "label": "Landgrove, Vermont"
+    },
+    "bloomington|minnesota": {
+      "lat": 44.8322405,
+      "lon": -93.3204872,
+      "label": "Bloomington, Minnesota"
+    },
+    "tahoe city|california": {
+      "lat": 39.1689372,
+      "lon": -120.143478,
+      "label": "Tahoe City, California"
+    },
+    "ketchum|idaho": {
+      "lat": 43.680741,
+      "lon": -114.363662,
+      "label": "Ketchum, Idaho"
+    },
+    "boulder|colorado": {
+      "lat": 40.0149856,
+      "lon": -105.270545,
+      "label": "Boulder, Colorado"
+    },
+    "fairbanks|alaska": {
+      "lat": 64.8511452,
+      "lon": -147.7403284,
+      "label": "Fairbanks, Alaska"
+    },
+    "boise|idaho": {
+      "lat": 43.6166163,
+      "lon": -116.200886,
+      "label": "Boise, Idaho"
+    },
+    "jay|vermont": {
+      "lat": 44.9481252,
+      "lon": -72.4381452,
+      "label": "Jay, Vermont"
+    },
+    "el jebel|colorado": {
+      "lat": 39.404151,
+      "lon": -107.09407481440618,
+      "label": "El Jebel, Colorado"
+    },
+    "southborough|massachusetts": {
+      "lat": 42.2669505,
+      "lon": -71.5249338,
+      "label": "Southborough, Massachusetts"
+    },
+    "duluth|minnesota": {
+      "lat": 46.7838287,
+      "lon": -92.1052679,
+      "label": "Duluth, Minnesota"
+    },
+    "eagan|minnesota": {
+      "lat": 44.818173,
+      "lon": -93.1659179,
+      "label": "Eagan, Minnesota"
+    },
+    "broomall|pennsylvania": {
+      "lat": 39.9815001,
+      "lon": -75.3565797,
+      "label": "Broomall, Pennsylvania"
+    },
+    "lake stevens|washington": {
+      "lat": 48.0197794,
+      "lon": -122.0660914,
+      "label": "Lake Stevens, Washington"
+    },
+    "seattle|washington": {
+      "lat": 47.6038321,
+      "lon": -122.330062,
+      "label": "Seattle, Washington"
+    },
+    "brooklyn park|minnesota": {
+      "lat": 45.1004807,
+      "lon": -93.3443585,
+      "label": "Brooklyn Park, Minnesota"
+    },
+    "mapleton|minnesota": {
+      "lat": 43.9288512,
+      "lon": -93.9560643,
+      "label": "Mapleton, Minnesota"
+    },
+    "briarcliff manor|new york": {
+      "lat": 41.1456512,
+      "lon": -73.8237456,
+      "label": "Briarcliff Manor, New York"
+    },
+    "lawrencburg|indiana": {
+      "lat": 39.090891,
+      "lon": -84.8499504,
+      "label": "Lawrencburg, Indiana"
+    },
+    "aspen|colorado": {
+      "lat": 39.1911128,
+      "lon": -106.82356,
+      "label": "Aspen, Colorado"
+    },
+    "bend|oregon": {
+      "lat": 44.0581728,
+      "lon": -121.3153096,
+      "label": "Bend, Oregon"
+    },
+    "winter park|colorado": {
+      "lat": 39.9180425,
+      "lon": -105.7855635,
+      "label": "Winter Park, Colorado"
+    },
+    "mammoth lakes|california": {
+      "lat": 37.6432525,
+      "lon": -118.9668509,
+      "label": "Mammoth Lakes, California"
+    },
+    "oak creek|colorado": {
+      "lat": 40.25112516624316,
+      "lon": -106.99800364775272,
+      "label": "Oak Creek, Colorado"
+    },
+    "durham|new hampshire": {
+      "lat": 43.134564,
+      "lon": -70.927048,
+      "label": "Durham, New Hampshire"
+    },
+    "winhall|vermont": {
+      "lat": 43.159047900000004,
+      "lon": -72.93510548109492,
+      "label": "Winhall, Vermont"
+    },
+    "helena|montana": {
+      "lat": 46.5927425,
+      "lon": -112.036277,
+      "label": "Helena, Montana"
+    },
+    "squamish|utah": {
+      "lat": 39.976076000000006,
+      "lon": -111.78418482486725,
+      "label": "Squamish, Utah"
+    },
+    "truckee|california": {
+      "lat": 39.3279454,
+      "lon": -120.1835765,
+      "label": "Truckee, California"
+    },
+    "salt lake city|utah": {
+      "lat": 40.7596198,
+      "lon": -111.886797,
+      "label": "Salt Lake City, Utah"
+    },
+    "redding|connecticut": {
+      "lat": 41.3025956,
+      "lon": -73.3834532,
+      "label": "Redding, Connecticut"
+    },
+    "boyne city|michigan": {
+      "lat": 45.216675,
+      "lon": -85.013942,
+      "label": "Boyne City, Michigan"
+    },
+    "alta|wyoming": {
+      "lat": 43.7542867,
+      "lon": -111.0366667,
+      "label": "Alta, Wyoming"
+    },
+    "cincinnati|ohio": {
+      "lat": 39.1014537,
+      "lon": -84.5124602,
+      "label": "Cincinnati, Ohio"
+    },
+    "vail|colorado": {
+      "lat": 39.5995318,
+      "lon": -106.33983290965188,
+      "label": "Vail, Colorado"
+    },
+    "rochester|new york": {
+      "lat": 43.157285,
+      "lon": -77.615214,
+      "label": "Rochester, New York"
+    },
+    "steamboat springs|colorado": {
+      "lat": 40.4848003,
+      "lon": -106.831735,
+      "label": "Steamboat Springs, Colorado"
+    },
+    "gaylord|michigan": {
+      "lat": 45.027513,
+      "lon": -84.674752,
+      "label": "Gaylord, Michigan"
+    },
+    "chagrin falls|ohio": {
+      "lat": 41.4312177,
+      "lon": -81.3923003,
+      "label": "Chagrin falls, Ohio"
+    },
+    "cleveland|ohio": {
+      "lat": 41.4996574,
+      "lon": -81.6936772,
+      "label": "Cleveland, Ohio"
+    },
+    "durango|colorado": {
+      "lat": 37.2769484,
+      "lon": -107.8766,
+      "label": "Durango, Colorado"
+    },
+    "oakland|california": {
+      "lat": 37.8044557,
+      "lon": -122.271356,
+      "label": "Oakland, California"
+    },
+    "plano|texas": {
+      "lat": 33.0136764,
+      "lon": -96.6925096,
+      "label": "Plano, Texas"
+    },
+    "coral springs|florida": {
+      "lat": 26.271192,
+      "lon": -80.2706044,
+      "label": "Coral Springs, Florida"
+    },
+    "san jose|california": {
+      "lat": 37.3361663,
+      "lon": -121.890591,
+      "label": "San Jose, California"
+    },
+    "st clair|michigan": {
+      "lat": 42.8254954,
+      "lon": -82.4864138,
+      "label": "St Clair, Michigan"
+    },
+    "colorado springs|colorado": {
+      "lat": 38.8339578,
+      "lon": -104.825348,
+      "label": "Colorado Springs, Colorado"
+    },
+    "ann arbor|michigan": {
+      "lat": 42.2813722,
+      "lon": -83.7484616,
+      "label": "Ann Arbor, Michigan"
+    },
+    "vienna|virginia": {
+      "lat": 38.9013729,
+      "lon": -77.2651762,
+      "label": "Vienna, Virginia"
+    },
+    "mount laurel|new jersey": {
+      "lat": 39.9341907,
+      "lon": -74.894271,
+      "label": "Mount Laurel, New Jersey"
+    },
+    "redondo beach|california": {
+      "lat": 33.8945006,
+      "lon": -118.3689778,
+      "label": "Redondo Beach, California"
+    },
+    "norwood|massachusetts": {
+      "lat": 42.194543,
+      "lon": -71.1994976,
+      "label": "Norwood, Massachusetts"
+    },
+    "los angeles|california": {
+      "lat": 34.0536909,
+      "lon": -118.242766,
+      "label": "Los Angeles, California"
+    },
+    "grosse pointe farms|michigan": {
+      "lat": 42.4092038,
+      "lon": -82.8918587,
+      "label": "Grosse Pointe Farms, Michigan"
+    },
+    "pasadena|texas": {
+      "lat": 29.6910753,
+      "lon": -95.2092076,
+      "label": "Pasadena, Texas"
+    },
+    "shelby township|michigan": {
+      "lat": 43.5974492,
+      "lon": -86.33795091855055,
+      "label": "Shelby Township, Michigan"
+    },
+    "north chelmsford|massachusetts": {
+      "lat": 42.6389798,
+      "lon": -71.3828403,
+      "label": "North Chelmsford, Massachusetts"
+    },
+    "maple grove|minnesota": {
+      "lat": 45.0984983,
+      "lon": -93.4419222,
+      "label": "Maple Grove, Minnesota"
+    },
+    "woodbury|minnesota": {
+      "lat": 44.919896,
+      "lon": -92.9339449,
+      "label": "Woodbury, Minnesota"
+    },
+    "orchard lake|michigan": {
+      "lat": 42.5869558,
+      "lon": -83.36895696372882,
+      "label": "Orchard Lake, Michigan"
+    },
+    "canton|michigan": {
+      "lat": 42.3076547,
+      "lon": -83.4868961,
+      "label": "Canton, Michigan"
+    },
+    "eden prairie|minnesota": {
+      "lat": 44.8546856,
+      "lon": -93.470786,
+      "label": "Eden Prairie, Minnesota"
+    },
+    "waterford|michigan": {
+      "lat": 42.680183549999995,
+      "lon": -83.39372586257059,
+      "label": "Waterford, Michigan"
+    },
+    "swansea|illinois": {
+      "lat": 38.5339392,
+      "lon": -89.9889936,
+      "label": "Swansea, Illinois"
+    },
+    "phoenix|arizona": {
+      "lat": 33.4484367,
+      "lon": -112.074141,
+      "label": "Phoenix, Arizona"
+    },
+    "long beach|new york": {
+      "lat": 40.5891999,
+      "lon": -73.6648081,
+      "label": "Long Beach, New York"
+    },
+    "east palestine|ohio": {
+      "lat": 40.8339509,
+      "lon": -80.5403469,
+      "label": "East Palestine, Ohio"
+    },
+    "warroad|minnesota": {
+      "lat": 48.905266,
+      "lon": -95.314404,
+      "label": "Warroad, Minnesota"
+    },
+    "lakeville|minnesota": {
+      "lat": 44.650051,
+      "lon": -93.2432791,
+      "label": "Lakeville, Minnesota"
+    },
+    "whitefish|montana": {
+      "lat": 48.4108018,
+      "lon": -114.334624,
+      "label": "Whitefish, Montana"
+    },
+    "erie|colorado": {
+      "lat": 40.0502623,
+      "lon": -105.049981,
+      "label": "Erie, Colorado"
+    },
+    "st. louis|missouri": {
+      "lat": 38.74962725,
+      "lon": -90.37047024952082,
+      "label": "St. Louis, Missouri"
+    },
+    "pittsburgh|pennsylvania": {
+      "lat": 40.4406968,
+      "lon": -80.0025666,
+      "label": "Pittsburgh, Pennsylvania"
+    },
+    "grosse pointe woods|michigan": {
+      "lat": 42.4435616,
+      "lon": -82.9069508,
+      "label": "Grosse pointe woods, Michigan"
+    },
+    "millis|massachusetts": {
+      "lat": 42.1675082,
+      "lon": -71.3572763,
+      "label": "Millis, Massachusetts"
+    },
+    "evergreen park|illinois": {
+      "lat": 41.720136,
+      "lon": -87.7013258,
+      "label": "Evergreen Park, Illinois"
+    },
+    "chappaqua|new york": {
+      "lat": 41.157284000000004,
+      "lon": -73.76769980526316,
+      "label": "Chappaqua, New York"
+    },
+    "north reading|massachusetts": {
+      "lat": 42.5750939,
+      "lon": -71.0786653,
+      "label": "North Reading, Massachusetts"
+    },
+    "bismarck|north dakota": {
+      "lat": 46.808327,
+      "lon": -100.783739,
+      "label": "Bismarck, North Dakota"
+    },
+    "salem|new hampshire": {
+      "lat": 42.7884957,
+      "lon": -71.2009035,
+      "label": "Salem, New Hampshire"
+    },
+    "eastvale|california": {
+      "lat": 33.9747067,
+      "lon": -117.566541,
+      "label": "Eastvale, California"
+    },
+    "excelsior|minnesota": {
+      "lat": 44.9032963,
+      "lon": -93.5663455,
+      "label": "Excelsior, Minnesota"
+    },
+    "sun valley|idaho": {
+      "lat": 43.696215,
+      "lon": -114.353097,
+      "label": "Sun Valley, Idaho"
+    },
+    "coppell|texas": {
+      "lat": 32.9552598,
+      "lon": -97.0155703,
+      "label": "Coppell, Texas"
+    },
+    "getzville|new york": {
+      "lat": 43.0243244,
+      "lon": -78.7678332,
+      "label": "Getzville, New York"
+    },
+    "plymouth|minnesota": {
+      "lat": 45.0065149,
+      "lon": -93.46651,
+      "label": "Plymouth, Minnesota"
+    },
+    "palos heights|illinois": {
+      "lat": 41.6681632,
+      "lon": -87.7962812,
+      "label": "Palos Heights, Illinois"
+    },
+    "roseville|minnesota": {
+      "lat": 45.0060767,
+      "lon": -93.1566107,
+      "label": "Roseville, Minnesota"
+    },
+    "farmington hills|michigan": {
+      "lat": 42.4853125,
+      "lon": -83.3771553,
+      "label": "Farmington Hills, Michigan"
+    },
+    "chanhassen|minnesota": {
+      "lat": 44.8618403,
+      "lon": -93.5307207,
+      "label": "Chanhassen, Minnesota"
+    },
+    "lake city|minnesota": {
+      "lat": 44.4478474,
+      "lon": -92.2678663,
+      "label": "Lake City, Minnesota"
+    },
+    "plymouth|michigan": {
+      "lat": 42.3712,
+      "lon": -83.4675021,
+      "label": "Plymouth, Michigan"
+    },
+    "orangeville|illinois": {
+      "lat": 42.4680287,
+      "lon": -89.6448828,
+      "label": "Orangeville, Illinois"
+    },
+    "o\u0092fallon|missouri": {
+      "lat": 38.7902503,
+      "lon": -90.7033292,
+      "label": "O\u0092Fallon, Missouri"
+    },
+    "wexford|pennsylvania": {
+      "lat": 40.6264561,
+      "lon": -80.055891,
+      "label": "Wexford, Pennsylvania"
+    },
+    "athens|ohio": {
+      "lat": 39.3289242,
+      "lon": -82.1012479,
+      "label": "Athens, Ohio"
+    },
+    "chelmsford|massachusetts": {
+      "lat": 42.5968617,
+      "lon": -71.3517602,
+      "label": "Chelmsford, Massachusetts"
+    },
+    "lake placid|new york": {
+      "lat": 44.321516599999995,
+      "lon": -73.98467868055555,
+      "label": "Lake Placid, New York"
+    },
+    "massena|new york": {
+      "lat": 44.9300823,
+      "lon": -74.8922422,
+      "label": "Massena, New York"
+    },
+    "glen rock|pennsylvania": {
+      "lat": 39.7931577,
+      "lon": -76.7302495,
+      "label": "Glen Rock, Pennsylvania"
+    },
+    "medway|massachusetts": {
+      "lat": 42.1417641,
+      "lon": -71.3967256,
+      "label": "Medway, Massachusetts"
+    },
+    "framingham|massachusetts": {
+      "lat": 42.2773177,
+      "lon": -71.4165905,
+      "label": "Framingham, Massachusetts"
+    },
+    "brookfield|wisconsin": {
+      "lat": 43.0615578,
+      "lon": -88.1260678,
+      "label": "Brookfield, Wisconsin"
+    },
+    "eau claire|wisconsin": {
+      "lat": 44.811349,
+      "lon": -91.4984941,
+      "label": "Eau Claire, Wisconsin"
+    },
+    "wauconda|illinois": {
+      "lat": 42.2621865,
+      "lon": -88.1195054,
+      "label": "Wauconda, Illinois"
+    },
+    "southington|connecticut": {
+      "lat": 41.6005435,
+      "lon": -72.8782941,
+      "label": "Southington, Connecticut"
+    },
+    "johnstown|pennsylvania": {
+      "lat": 40.3267407,
+      "lon": -78.9219698,
+      "label": "Johnstown, Pennsylvania"
+    },
+    "princeton|new jersey": {
+      "lat": 40.3421376,
+      "lon": -74.6588346,
+      "label": "Princeton, New Jersey"
+    },
+    "nokesville|virginia": {
+      "lat": 38.692381999999995,
+      "lon": -77.57683553503787,
+      "label": "Nokesville, Virginia"
+    },
+    "palisades tahoe|california": {
+      "lat": 39.19662245,
+      "lon": -120.23454683218175,
+      "label": "Palisades Tahoe, California"
+    },
+    "starksboro|vermont": {
+      "lat": 44.2273281,
+      "lon": -73.0568483,
+      "label": "Starksboro, Vermont"
+    },
+    "carrabassett valley|maine": {
+      "lat": 45.0782382,
+      "lon": -70.2114804,
+      "label": "Carrabassett Valley, Maine"
+    },
+    "littleton|colorado": {
+      "lat": 39.613321,
+      "lon": -105.016649,
+      "label": "Littleton, Colorado"
+    },
+    "edwards|colorado": {
+      "lat": 39.6441174,
+      "lon": -106.5939635,
+      "label": "Edwards, Colorado"
+    },
+    "strawberry|california": {
+      "lat": 38.7963002,
+      "lon": -120.146582,
+      "label": "Strawberry, California"
+    },
+    "redmond|washington": {
+      "lat": 47.6694141,
+      "lon": -122.1238767,
+      "label": "Redmond, Washington"
+    },
+    "carnelian bay|california": {
+      "lat": 39.2270008,
+      "lon": -120.081236,
+      "label": "Carnelian  Bay, California"
+    },
+    "jackson hole|wyoming": {
+      "lat": 43.684017,
+      "lon": -110.44366292631179,
+      "label": "Jackson Hole, Wyoming"
+    },
+    "san francisco|california": {
+      "lat": 37.7879363,
+      "lon": -122.4075201,
+      "label": "San Francisco, California"
+    },
+    "aurora|oregon": {
+      "lat": 45.2310497,
+      "lon": -122.755035,
+      "label": "Aurora, Oregon"
+    },
+    "rockford|illinois": {
+      "lat": 42.2713945,
+      "lon": -89.093966,
+      "label": "Rockford, Illinois"
+    },
+    "teton village|wyoming": {
+      "lat": 43.593145,
+      "lon": -110.84492617640024,
+      "label": "Teton Village, Wyoming"
+    },
+    "portland|oregon": {
+      "lat": 45.5202471,
+      "lon": -122.674194,
+      "label": "Portland, Oregon"
+    },
+    "palos verdes|california": {
+      "lat": 33.7388745,
+      "lon": -118.39764738317137,
+      "label": "Palos Verdes, California"
+    },
+    "longmont|colorado": {
+      "lat": 40.1672117,
+      "lon": -105.101928,
+      "label": "Longmont, Colorado"
+    },
+    "torrance|california": {
+      "lat": 33.8371392,
+      "lon": -118.3413606,
+      "label": "Torrance, California"
+    },
+    "cottonwood heights|utah": {
+      "lat": 40.613474,
+      "lon": -111.8256464,
+      "label": "Cottonwood Heights, Utah"
+    },
+    "silverthorne|colorado": {
+      "lat": 39.63577998421541,
+      "lon": -106.0750864370674,
+      "label": "Silverthorne, Colorado"
+    },
+    "hood river|oregon": {
+      "lat": 45.65370938691724,
+      "lon": -121.55180684296943,
+      "label": "Hood River, Oregon"
+    },
+    "eagle|colorado": {
+      "lat": 39.6545407,
+      "lon": -106.828038,
+      "label": "Eagle, Colorado"
+    },
+    "wrightwood|california": {
+      "lat": 34.3556399,
+      "lon": -117.62917407587737,
+      "label": "Wrightwood, California"
+    },
+    "minneapolis|minnesota": {
+      "lat": 44.9772995,
+      "lon": -93.2654692,
+      "label": "Minneapolis, Minnesota"
+    },
+    "iron river|michigan": {
+      "lat": 46.083887042193204,
+      "lon": -88.63812433911453,
+      "label": "Iron River, Michigan"
+    },
+    "pinckney|michigan": {
+      "lat": 42.4567013,
+      "lon": -83.9463359,
+      "label": "Pinckney, Michigan"
+    },
+    "golden|colorado": {
+      "lat": 39.7546349,
+      "lon": -105.22058,
+      "label": "Golden, Colorado"
+    },
+    "monroe township|new jersey": {
+      "lat": 40.335756,
+      "lon": -74.4334464,
+      "label": "Monroe Township, New Jersey"
+    },
+    "copper mountain|colorado": {
+      "lat": 39.478088,
+      "lon": -106.16288874612489,
+      "label": "Copper Mountain, Colorado"
+    },
+    "millburn|new jersey": {
+      "lat": 40.7257321,
+      "lon": -74.3037008,
+      "label": "Millburn, New Jersey"
+    },
+    "fairfax|virginia": {
+      "lat": 38.8462236,
+      "lon": -77.3063733,
+      "label": "Fairfax, Virginia"
+    },
+    "poughkeepsie|new york": {
+      "lat": 41.7065539,
+      "lon": -73.9283672,
+      "label": "Poughkeepsie, New York"
+    },
+    "tacoma|washington": {
+      "lat": 47.2455013,
+      "lon": -122.438329,
+      "label": "Tacoma, Washington"
+    },
+    "bellevue|washington": {
+      "lat": 47.6144219,
+      "lon": -122.192337,
+      "label": "Bellevue, Washington"
+    },
+    "medfield|massachusetts": {
+      "lat": 42.1865609,
+      "lon": -71.30546,
+      "label": "Medfield, Massachusetts"
+    },
+    "new york|new york": {
+      "lat": 40.7127281,
+      "lon": -74.0060152,
+      "label": "New York, New York"
+    },
+    "fairfield|connecticut": {
+      "lat": 41.1428951,
+      "lon": -73.2584121,
+      "label": "Fairfield, Connecticut"
+    },
+    "warrington|pennsylvania": {
+      "lat": 40.2492741,
+      "lon": -75.1340604,
+      "label": "Warrington, Pennsylvania"
+    },
+    "ocala|florida": {
+      "lat": 29.1871986,
+      "lon": -82.1400923,
+      "label": "Ocala, Florida"
+    },
+    "burlington|washington": {
+      "lat": 48.4738136,
+      "lon": -122.330453,
+      "label": "Burlington, Washington"
+    },
+    "oak park|illinois": {
+      "lat": 41.8878145,
+      "lon": -87.7887615,
+      "label": "Oak Park, Illinois"
+    },
+    "glen ellyn|illinois": {
+      "lat": 41.9104345,
+      "lon": -88.073279,
+      "label": "Glen Ellyn, Illinois"
+    },
+    "white bear lake|minnesota": {
+      "lat": 45.0838098,
+      "lon": -93.0069304,
+      "label": "White Bear Lake, Minnesota"
+    },
+    "lino lakes|minnesota": {
+      "lat": 45.1602442,
+      "lon": -93.0888324,
+      "label": "Lino Lakes, Minnesota"
+    },
+    "kewaskum|wisconsin": {
+      "lat": 43.5154788,
+      "lon": -88.2241383,
+      "label": "Kewaskum, Wisconsin"
+    },
+    "crestview|florida": {
+      "lat": 30.7621326,
+      "lon": -86.5705084,
+      "label": "Crestview, Florida"
+    },
+    "willowbrook|illinois": {
+      "lat": 41.7697533,
+      "lon": -87.9358931,
+      "label": "Willowbrook, Illinois"
+    },
+    "west des moines|iowa": {
+      "lat": 41.5644476,
+      "lon": -93.7594059,
+      "label": "West Des Moines, Iowa"
+    }
+  },
+  "failed": [
+    {
+      "city": "Wanaka",
+      "state": "New Zealand",
+      "score": 55
+    },
+    {
+      "city": "Kharkiv",
+      "state": "Ukraine",
+      "score": 15
+    },
+    {
+      "city": "Washington",
+      "state": "Washington D.C.",
+      "score": 70
+    }
+  ]
+}
