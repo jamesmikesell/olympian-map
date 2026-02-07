@@ -84,7 +84,6 @@
   <body>
     <div class="wrap">
       <h1>2026 U.S. Olympian Hometowns</h1>
-      <p class="sub">Pins are clustered when zoomed out to reduce clutter.</p>
       <div id="status" class="status">Loading data...</div>
       <div id="map" role="region" aria-label="Olympian hometown map"></div>
     </div>
@@ -257,14 +256,14 @@
           if (coords) addMarker(g, coords.lat, coords.lon);
 
           if ((i + 1) % 10 === 0 || i === groups.length - 1) {
-            statusEl.textContent = `Processed ${i + 1}/${groups.length} hometowns. Mapped: ${fromPrecomputed + fromCache + geocodedNow}, unresolved: ${failed}.`;
+            statusEl.textContent = `Processed ${i + 1}/${groups.length} hometowns. Mapped: ${fromPrecomputed + fromCache + geocodedNow}.`;
           }
         }
 
         const bounds = clusters.getBounds();
         if (bounds.isValid()) map.fitBounds(bounds.pad(0.1));
 
-        statusEl.textContent = `Done. ${rows.length} Olympians, ${fromPrecomputed + fromCache + geocodedNow} hometown pins, ${failed} unresolved hometowns.`;
+        statusEl.textContent = `Done. ${rows.length} Olympians, ${fromPrecomputed + fromCache + geocodedNow} hometown pins.`;
       }
 
       render().catch((err) => {
