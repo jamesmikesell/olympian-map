@@ -79,6 +79,21 @@
       .popup-list li {
         margin: 2px 0;
       }
+
+      .hometown-pin {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #1b6ca8;
+        color: #fff;
+        border: 2px solid #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
     </style>
   </head>
   <body>
@@ -208,7 +223,15 @@
           </div>
         `;
 
-        const marker = L.marker([lat, lon]);
+        const count = group.athletes.length;
+        const marker = L.marker([lat, lon], {
+          icon: L.divIcon({
+            className: "",
+            html: `<div class="hometown-pin">${count}</div>`,
+            iconSize: [34, 34],
+            iconAnchor: [17, 17]
+          })
+        });
         marker.bindPopup(popup, { maxHeight: 260 });
         clusters.addLayer(marker);
       }
