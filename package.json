@@ -1,0 +1,28 @@
+{
+  "name": "olympian-map",
+  "version": "1.0.0",
+  "description": "<https://jamesmikesell.github.io/olympian-map/>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve:docs": "http-server docs -p 8080",
+    "start": "npm run serve:docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesmikesell/olympian-map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesmikesell/olympian-map/issues"
+  },
+  "homepage": "https://github.com/jamesmikesell/olympian-map#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
