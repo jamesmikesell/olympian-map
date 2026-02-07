@@ -194,7 +194,10 @@
         const sorted = [...group.athletes].sort((a, b) => a.name.localeCompare(b.name));
 
         const items = sorted
-          .map((a) => `<li><strong>${a.name}</strong>${a.sport ? ` - ${a.sport}` : ""}</li>`)
+          .map((a) => {
+            const searchUrl = `https://www.teamusa.com/search?q=${encodeURIComponent(a.name)}`;
+            return `<li><a href="${searchUrl}" target="_blank" rel="noopener noreferrer"><strong>${a.name}</strong></a>${a.sport ? ` - ${a.sport}` : ""}</li>`;
+          })
           .join("");
 
         const popup = `
