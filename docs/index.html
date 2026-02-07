@@ -150,6 +150,16 @@
         box-shadow: 0 8px 24px rgba(16, 36, 58, 0.08);
       }
 
+      .source-note {
+        margin: 10px 2px 0;
+        font-size: 0.75rem;
+        color: #5a7188;
+      }
+
+      .source-note a {
+        color: inherit;
+      }
+
       .popup-list {
         margin: 8px 0 0;
         padding-left: 18px;
@@ -194,6 +204,15 @@
       </header>
       <div id="status" class="status">Loading data...</div>
       <div id="map" role="region" aria-label="Olympian hometown map"></div>
+      <p class="source-note">
+        Data source:
+        <a
+          href="https://www.nbcolympics.com/news/team-usas-roster-2026-milan-cortina-olympics-officially-set"
+          target="_blank"
+          rel="noopener noreferrer"
+          >NBC Olympics</a
+        >
+      </p>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
